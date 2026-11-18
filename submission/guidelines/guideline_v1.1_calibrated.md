@@ -1,23 +1,20 @@
-# Label contract — Phố châu Á — BỔ SUNG v1.1 — <<MSHV - Họ tên>>
+# Label contract — Phố châu Á — Bổ sung v1.1
 
-> **Chỉ viết phần thay đổi so với v1.0** (không copy cả file). Chốt các câu hỏi mở ở mục 6 của v1.0 (hoặc nói rõ câu nào chưa chốt, vì sao)
-> và thêm quy tắc mới rút ra từ lỗi của máy / lỗi của bạn. Mỗi ca khó **có ảnh ví dụ** (`img_0xx`) và khớp một dòng trong `qc/calibration_decisions.csv`.
+## Câu hỏi mở đã chốt
 
-## 1. Câu hỏi mở đã chốt (từ mục 6 của v1.0)
+| Ca | Câu hỏi v1.0 | Quy tắc bổ sung | Ảnh ví dụ |
+|---|---|---|---|
+| CAL-02 | §6.2 — Xe máy đỗ sát nhau gần camera | Gán riêng từng xe nếu box cao từ 20 px và có thể xác định phần nhìn thấy theo §4.1. Chỉ khoanh `ignore_region` cho phần cụm gồm ít nhất 5 vật sát nhau có box dưới 20 px. Tiếp tục gán riêng các xe đủ điều kiện ở ngay cạnh cụm. | img_005.jpg |
 
-| # | Câu hỏi | Quyết định | Ảnh ví dụ | `case_id` |
-|---|---|---|---|---|
-| <<1>> | <<xe đạp điện: bicycle hay motorbike?>> | <<>> | <<img_0xx>> | <<CAL-01>> |
+Các câu hỏi mở còn lại chưa chốt trong lần hiệu chỉnh tham chiếu này.
 
-## 2. Ca khó mới (từ lỗi của máy, bẫy lọt, box `can_review`)
+## Ca khó và điểm kiểm tra
 
-| Ảnh | Tình huống | Máy làm gì (model nào) | Quyết định của bạn | Quy tắc mới (vào mục nào của v1.0) |
-|---|---|---|---|---|
-| <<img_0xx>> | <<>> | <<>> | <<>> | <<>> |
+| Ca | Ảnh ví dụ | Tình huống | Quy tắc bổ sung |
+|---|---|---|---|
+| CAL-01 | img_013.jpg | Trong lần thử YOLO26, tuk-tuk có mui được đề xuất là `car`. | Kiểm tra kiểu khung và phần bánh thấy được trước khi chấp nhận lớp. Dùng `three_wheeler` khi nhận diện được xe ba bánh, kể cả xe có mui. Giữ riêng box người đủ điều kiện. |
+| CAL-03 | img_003.jpg | Bẫy box lỏng còn sót sau review tham chiếu. | Ở cuối lượt duyệt, rà riêng cả bốn cạnh. Khi một cạnh ôm thêm nền, kéo cạnh đó về điểm ngoài cùng của phần vật nhìn thấy theo §4.1. |
 
-## 3. Lịch sử thay đổi
+## Lịch sử thay đổi
 
-| Phiên bản | Thay đổi | Lý do (ca nào, `case_id`) |
-|---|---|---|
-| v1.0 | Bản giảng viên | — |
-| v1.1 | <<tóm tắt các thay đổi ở mục 1–2>> | <<>> |
+v1.1 làm rõ phạm vi của `ignore_region` ở cụm hỗn hợp, dấu hiệu xác nhận xe ba bánh và thao tác kiểm tra box lỏng. Các ca tương ứng là CAL-01, CAL-02 và CAL-03.

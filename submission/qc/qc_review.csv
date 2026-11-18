@@ -1,0 +1,6 @@
+image,object_id,error_type,reviewer,note
+img_003.jpg,,khong,Codex,Rà trực quan ảnh có box; chưa ghi nhận lỗi chắc chắn.
+img_006.jpg,,khong,Codex,Rà trực quan ảnh có box; chưa ghi nhận lỗi chắc chắn.
+img_014.jpg,138,sai_vi_tri_kich_thuoc,Codex,Box xe máy tiền cảnh dư nền ở cạnh trái và cạnh trên.
+img_031.jpg,,khong,Codex,Rà trực quan ảnh có box; chưa ghi nhận lỗi chắc chắn.
+img_035.jpg,,khong,Codex,Rà trực quan ảnh có box; chưa ghi nhận lỗi chắc chắn.

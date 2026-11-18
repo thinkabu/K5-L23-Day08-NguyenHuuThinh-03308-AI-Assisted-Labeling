@@ -1,1 +1,3 @@
 step,images,minutes,note
+gold_manual,4,21,Dữ liệu mẫu - Gán nhãn thủ công 4 ảnh
+batch_review,24,72,Dữ liệu mẫu - Review pre-label lô batch

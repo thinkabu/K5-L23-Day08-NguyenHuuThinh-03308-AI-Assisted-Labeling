@@ -1,1 +1,4 @@
 case_id,image,nguon,van_de,quyet_dinh,quy_tac_ghi_vao_guideline,phien_ban_guideline
+CAL-01,img_013.jpg,loi_may,YOLO26 đề xuất nhãn car cho tuk-tuk có mui,Xác nhận hình dạng xe và sửa thành three_wheeler khi đủ dấu hiệu,Kiểm tra khung và bánh trước khi chấp nhận lớp của xe có mui,v1.1
+CAL-02,img_005.jpg,cau_hoi_mo,Xe máy đỗ sát nhau gần camera xử lý ra sao,Gán riêng xe đủ lớn và có phần nhìn thấy đủ điều kiện,Chỉ dùng ignore_region cho phần cụm ít nhất 5 vật có box cao dưới 20 px,v1.1
+CAL-03,img_003.jpg,bay_lot,Box lỏng sót lại sau lượt review,Chỉnh cạnh thừa theo biên phần nhìn thấy,Rà riêng bốn cạnh box ở cuối mỗi ảnh,v1.1
